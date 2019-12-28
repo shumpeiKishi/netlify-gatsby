@@ -1,4 +1,5 @@
 const path = require(`path`)
+const { graphql } = require(`gatsby`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 /**
@@ -21,11 +22,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
 
     // Create new queryable field with name of slug
-    createNodeField({
-      node,
-      name: "slug",
-      value: `blog${relativeFilePath}`,
-    })
+    // createNodeField({
+    //   node,
+    //   name: "slug",
+    //   value: `blog${relativeFilePath}`,
+    // })
   }
 }
 

@@ -3,20 +3,12 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => {
+const SpeakingPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" />
-      <h1>Blog</h1>
-      {
-        data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={`/${node.fields.slug}`}>
-              {node.frontmatter.title}
-            </Link>
-          </div>
-        ))
-      }
+      <SEO title="Kujira Digital | 登壇履歴" />
+      <h1>登壇履歴</h1>
+      <p>Drupal Camp Den Nagoyaにて登壇しました。</p>
     </Layout>
   )
 }
@@ -39,4 +31,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default SpeakingPage

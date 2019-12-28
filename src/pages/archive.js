@@ -3,11 +3,11 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => {
+const ArchivePage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" />
-      <h1>Blog</h1>
+      <SEO title="Kujira Digital | 過去の記事" />
+      <h1>過去の記事</h1>
       {
         data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
@@ -39,4 +39,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default ArchivePage

@@ -3,19 +3,21 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => {
+const IndexPageEn = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
       <h1>Blog</h1>
       {
-        data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={`/${node.fields.slug}`}>
-              {node.frontmatter.title}
-            </Link>
-          </div>
-        ))
+        data.allMarkdownRemark.edges.map(({ node }) => {
+          return (
+            <div key={node.id}>
+              <Link to={`/${node.fields.slug}`}>
+                {node.frontmatter.title}
+              </Link>
+            </div>
+          )
+        })
       }
     </Layout>
   )
@@ -23,7 +25,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark  (filter: {fields: {langKey: {eq: "ja"}}}) {
+    allMarkdownRemark  (filter: {fields: {langKey: {eq: "en"}}}) {
       edges {
         node {
           id
@@ -39,4 +41,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default IndexPageEn
