@@ -39,7 +39,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <ul className="menu" style={{ display: `flex`, marginBottom: `0`, listStyleType: `none` }}>
+      <ul className="menu" style={{ display: `flex`, flexWrap: `wrap`, marginBottom: `0`, listStyleType: `none` }}>
         <MenuItem to="/archive" menuItemName="過去の記事" />
         <MenuItem to="/speaking" menuItemName="講演" />
         <MenuItem to="/about" menuItemName="このサイトについて" />
