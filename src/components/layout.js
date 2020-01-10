@@ -35,12 +35,20 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+        <div>
+        <footer style={{backgroundColor: `lightgray`}}>
+          <div
+            style={{
+              margin: `0 auto`,
+              maxWidth: 960,
+              padding: `0.5rem 1.0875rem 0.5rem`,
+              paddingTop: 0,
+            }}
+          >&copy; {new Date().getFullYear()}, Kujira Digital</div>  
+        </footer>
+        </div>
+          
     </>
   )
 }

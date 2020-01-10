@@ -7,12 +7,13 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Blog</h1>
+      <h2>白くじらのブログ</h2>
       {
         data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
+            <span style={{lineHeight: `2.4rem`}}>{node.frontmatter.date}</span>
             <Link to={`/${node.fields.slug}`}>
-              {node.frontmatter.title}
+              <h3 style={{fontSize: `1.2rem`}}>{node.frontmatter.title}</h3>
             </Link>
           </div>
         ))
@@ -23,12 +24,13 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark  (filter: {fields: {langKey: {eq: "ja"}}}) {
+    allMarkdownRemark  (filter: {fields: {langKey: {eq: "ja"}}}, sort: {order: DESC, fields: frontmatter___date}) {
       edges {
         node {
           id
           frontmatter {
             title
+            date(formatString: "YYYY年MM月DD日")
           }
           fields {
             slug
