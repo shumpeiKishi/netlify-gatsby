@@ -40,7 +40,7 @@ const AboutPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    file (relativePath: {eq: "images/kujira_logo.png"}) {
+    file (relativePath: {eq: "kujira_logo.png"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
