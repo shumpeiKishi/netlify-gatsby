@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
         data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <span style={{lineHeight: `2.4rem`}}>{node.frontmatter.date}</span>
-            <Link to={`/${node.fields.slug}`}>
+            <Link to={`${node.fields.slug}`}>
               <h3 style={{fontSize: `1.2rem`}}>{node.frontmatter.title}</h3>
             </Link>
           </div>

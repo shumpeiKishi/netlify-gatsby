@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const AboutPage = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
       <SEO title="Kujira Digital | 著者について" />
