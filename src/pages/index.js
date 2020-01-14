@@ -8,13 +8,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h2>白くじらのブログ</h2>
       {
         data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <span style={{lineHeight: `2.4rem`}}>{node.frontmatter.date}</span>
+            <span style={{ lineHeight: `2.4rem` }}>{node.frontmatter.date}</span>
             <Link to={`${node.fields.slug}`}>
-              <h3 style={{fontSize: `1.2rem`}}>{node.frontmatter.title}</h3>
+              <h3 style={{ fontSize: `1.2rem` }}>{node.frontmatter.title}</h3>
             </Link>
           </div>
         ))

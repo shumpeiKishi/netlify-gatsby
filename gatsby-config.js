@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Kujira Digital`,
-    description: `クジラデジタルは下関のデジタルエージェンシーです。`,
-    author: `@gatsbyjs`,
+    description: `クジラデジタル`,
+    author: `@shumpeiKishi`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
