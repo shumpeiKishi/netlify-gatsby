@@ -16,11 +16,6 @@ const AboutPage = ({ data }) => {
         </div>
         <div>
           <p>DrupalとJavaScriptが好きなWebエンジニア、岸俊兵の個人ブログです。</p>
-          <h2>経歴</h2>
-          <p>
-            カナダ・イエローナイフでウェブ開発者として勤務していた際、エンタープライズ向けオープンソースCMSのDrupalによる開発に従事。
-            帰国後、アクイア・Drupalのヘビーユーザーであるジョンソン・エンド・ジョンソン株式会社の社内SEを経て、2019年1月よりアクイアジャパン合同会社のSolusions Engineer。
-          </p>
           <h2>関心</h2>
           <ul>
             <li>Drupal</li>
