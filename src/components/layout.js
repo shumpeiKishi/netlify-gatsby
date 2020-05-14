@@ -57,7 +57,7 @@ const Layout = ({ children }) => {
         `,
         }}
       />
-      <script src={{`//kishienzan.com/focus/1.js`}} type={{`text/javascript`}} async={{`async`}} />
+      <script src="//kishienzan.com/focus/1.js" type="text/javascript" charset="utf-8" async="async"></script>
     </>
   )
 }
